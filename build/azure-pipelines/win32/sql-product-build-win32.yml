@@ -118,7 +118,7 @@ steps:
       . build/azure-pipelines/win32/exec.ps1
       $ErrorActionPreference = "Stop"
       exec { yarn electron x64 }
-      exec { .\scripts\test.bat --build --coverage --tfs "Unit Tests" }
+      exec { .\scripts\test.bat --build --tfs "Unit Tests" }
     displayName: Run unit tests (Electron)
     condition: and(succeeded(), eq(variables['RUN_TESTS'], 'true'))
 
